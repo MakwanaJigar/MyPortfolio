@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import BG1 from '../HD/BG5.jpg'
+import BG1 from '../HD/BG2.jpg'
 import{ Typewriter} from 'react-simple-typewriter';
 import { Divider } from '@react-md/divider';
 import AOS from 'aos';
@@ -18,7 +18,7 @@ const Home = () => {
     <>
 
 <div class="card bg-dark text-white" id='home'>
-  <img src={BG1} class="card-img img-fluid" alt="..." style={{width:'100vw',height:'90vh',opacity:'0.4'}}/>
+  <img src={BG1} class="card-img img-fluid" alt="..." style={{width:'100vw',height:'90vh',opacity:'0.4',borderRadius:'0'}}/>
   <div class="card-img-overlay" style={{marginTop:'30vh',marginLeft:'5vh'}}>
     <h1 class="card-title">Hi,I'm Jigar Makwana</h1>
     <h3 class="card-text text-warning"><Typewriter

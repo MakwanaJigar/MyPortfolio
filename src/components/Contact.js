@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init(
+      {
+        offset: 120,
+        duration: 1000
+      }
+    );
+  },[])
   return (
     <>
-      <div className="container mycontactform" id="contact">
+      <div className="container mycontactform" id="contact" data-aos="zoom-in-down">
         <div
           className="row m-5 no-gutters shadow-lg"
           style={{

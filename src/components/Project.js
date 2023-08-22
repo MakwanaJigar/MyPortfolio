@@ -98,7 +98,7 @@ const Project = () => {
               </p>
             </div>
             <div className="col-md-5 order-md-1">
-                <img src={iCoderIMG} className="img-fluid" alt="..."/>
+                <img src={iCoderIMG} className="img-fluid mb-3" alt="..."/>
             </div>
           </div>  
 
