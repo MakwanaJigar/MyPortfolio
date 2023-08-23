@@ -18,8 +18,9 @@ const Download = (e) => {
       method:"GET",
       responseType:"blob"
     }).then((res) => {
-      console.log(res);
+        alert("Resume Download Successfully");
         fileDownload(res.data,"Successfully Download");
+        
     });
 };
 
