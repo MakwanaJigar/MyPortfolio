@@ -11,21 +11,44 @@ import fileDownload from 'js-file-download';
 const Home = () => {
 
   // FOR DOWNLOAD MY RESUME
-  const Download = (e) => {
-    e.preventDefault();
-    console.log('Download function called'); // Check if this log is printed
-    axios({
-      url: "http://localhost:8000/",
-      method: "GET",
-      responseType: "blob"
-    }).then((res) => {
-      console.log('Download success:', res); // Check if this log is printed
-      alert("Resume Download Successfully");
-      fileDownload(res.data, "resume.pdf");
-    }).catch((error) => {
-      console.error("Error downloading file:", error);
-    });
+  const handleDownload = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/', {
+        responseType: 'blob', // Important for binary data like files
+      });
+
+      // Extract filename from Content-Disposition header
+      const contentDisposition = response.headers['content-disposition'];
+      const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+      const matches = filenameRegex.exec(contentDisposition);
+      const filename = matches && matches[1] ? matches[1] : 'downloaded-file';
+
+      // Trigger file download using js-file-download
+      fileDownload(response.data, filename);
+      
+      // Show success message
+      alert('File downloaded successfully');
+    } catch (error) {
+      console.error('Error downloading file:', error);
+    }
   };
+
+
+  // const Download = (e) => {
+  //   e.preventDefault();
+  //   console.log('Download function called'); // Check if this log is printed
+  //   axios({
+  //     url: "http://localhost:8000/",
+  //     method: "GET",
+  //     responseType: "blob"
+  //   }).then((res) => {
+  //     console.log('Download success:', res); // Check if this log is printed
+  //     alert("Resume Download Successfully");
+  //     fileDownload(res.data, "resume.pdf");
+  //   }).catch((error) => {
+  //     console.error("Error downloading file:", error);
+  //   });
+  // };
 
 
 
@@ -85,8 +108,9 @@ const Home = () => {
       /></h3>
       
   <div className="btn btn-danger" 
-  onClick={(e) => Download(e)}
-  >My Resume<i class="fa-solid fa-download mx-2"></i></div>
+  // onClick={(e) => Download(e)}
+  onClick={handleDownload}
+>My Resume<i class="fa-solid fa-download mx-2"></i></div>
   </div>
 
 </div>
