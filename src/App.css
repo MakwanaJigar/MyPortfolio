@@ -52,9 +52,9 @@ ul li:hover{
 }
 /* knowledge */
 .knowledge{
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   color: aliceblue;
   font-weight: 100;
 }

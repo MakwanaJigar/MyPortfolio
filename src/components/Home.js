@@ -103,9 +103,9 @@ const Home = () => {
 
            <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">ReactJS</h6>
-              <Divider  style={{width:'15vw',top: '20px',
+              <Divider  style={{width:'15vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
@@ -113,9 +113,9 @@ const Home = () => {
 
             <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">JavaScript</h6>
-              <Divider  style={{width:'20vw',top: '20px',
+              <Divider  style={{width:'20vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
@@ -123,9 +123,9 @@ const Home = () => {
 
             <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">NodeJS</h6>
-              <Divider  style={{width:'18vw',top: '20px',
+              <Divider  style={{width:'18vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
@@ -133,9 +133,9 @@ const Home = () => {
 
             <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">HTML/CSS</h6>
-              <Divider  style={{width:'23vw',top: '20px',
+              <Divider  style={{width:'23vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
@@ -143,9 +143,9 @@ const Home = () => {
 
             <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">Bootstrap</h6>
-              <Divider  style={{width:'25vw',top: '20px',
+              <Divider  style={{width:'25vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
@@ -153,9 +153,9 @@ const Home = () => {
 
             <div className="language" data-aos='fade-left'>
             <h6 className=" fw-bold me-2 tech">Tailwind</h6>
-            <Divider  style={{width:'15vw',top: '20px',
+            <Divider  style={{width:'15vw',top: '3vh',
                   border: 'none',
-                  height: '12px',
+                  height: '1vh',
                   background: '#0FFF50'}}/>
             </div> 
 
