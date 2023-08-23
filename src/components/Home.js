@@ -4,8 +4,27 @@ import{ Typewriter} from 'react-simple-typewriter';
 import { Divider } from '@react-md/divider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import axios from 'axios'
+import fileDownload from 'js-file-download';
+
 
 const Home = () => {
+
+  // FOR DOWNLOAD MY RESUME 
+const Download = (e) => {
+    e.preventDefault();
+    axios({
+      url:"http://localhost:8000/",
+      method:"GET",
+      responseType:"blob"
+    }).then((res) => {
+      console.log(res);
+        fileDownload(res.data,"Successfully Download");
+    });
+};
+
+// FOR COMPONENT ANIMATION
+
   useEffect(() => {
     AOS.init(
       {
@@ -17,11 +36,11 @@ const Home = () => {
   return (
     <>
 
-<div class="card bg-dark text-white" id='home'>
-  <img src={BG1} class="card-img img-fluid" alt="..." style={{width:'100vw',height:'90vh',opacity:'0.4',borderRadius:'0'}}/>
-  <div class="card-img-overlay" style={{marginTop:'30vh',marginLeft:'5vh'}}>
-    <h1 class="card-title">Hi,I'm Jigar Makwana</h1>
-    <h3 class="card-text text-warning"><Typewriter
+<div className="card bg-dark text-white" id='home'>
+  <img src={BG1} className="card-img img-fluid" alt="..." style={{width:'100vw',height:'90vh',opacity:'0.4',borderRadius:'0'}}/>
+  <div className="card-img-overlay" style={{marginTop:'30vh',marginLeft:'5vh'}}>
+    <h1 className="card-title">Hi,I'm Jigar Makwana</h1>
+    <h3 className="card-text text-warning" style={{textTransform:'uppercase',}}><Typewriter
             loop
             cursor
             cursorStyle='_'
@@ -30,10 +49,12 @@ const Home = () => {
             delaySpeed={1000}
             words={['Frontend Developer']}
       /></h3>
-      <div className="btn btn-primary m-2"><i className='fa fa-github'></i></div>
-      <div className="btn btn-success m-2"><i className='fa fa-instagram'></i></div>
-      <div className="btn btn-danger m-2"><i className='fa fa-linkedin'></i></div>
+      
+  <div className="btn btn-danger" 
+  onClick={(e) => Download(e)}
+  >My Resume<i class="fa-solid fa-download mx-2"></i></div>
   </div>
+
 </div>
 
       {/*...........main content........... */}

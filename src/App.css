@@ -10,17 +10,21 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  
   background-color: black;
 }
 ul li:hover{
-   font-weight: bold;
-   background-color: rgb(5, 4, 47);
+   /* font-weight: bold; */
+   /* background-color: rgb(5, 4, 47); */
    border-bottom: 1px red solid;
   }
 /* ...........NAVBAR............. */
 .navbar{
-  background-color: rgb(24, 4, 67);
+  background-color: rgb(28, 25, 34);
+  height: 10vh;
+}
+.navbar-brand{   
+   font-family: 'Shadows Into Light', cursive;
+   background: linear-gradient(#e66465, #9198e5);
 }
 
 /* .....................HOME................... */
