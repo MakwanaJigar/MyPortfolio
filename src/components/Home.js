@@ -13,17 +13,35 @@ const Home = () => {
   // FOR DOWNLOAD MY RESUME
   const Download = (e) => {
     e.preventDefault();
+    console.log('Download function called'); // Check if this log is printed
     axios({
       url: "http://localhost:8000/",
       method: "GET",
       responseType: "blob"
     }).then((res) => {
+      console.log('Download success:', res); // Check if this log is printed
       alert("Resume Download Successfully");
-      fileDownload(res.data, "resume.pdf"); // Provide the correct filename and extension
+      fileDownload(res.data, "resume.pdf");
     }).catch((error) => {
       console.error("Error downloading file:", error);
     });
   };
+
+
+
+  // const Download = (e) => {
+  //   e.preventDefault();
+  //   axios({
+  //     url: "http://localhost:8000/",
+  //     method: "GET",
+  //     responseType: "blob"
+  //   }).then((res) => {
+  //     alert("Resume Download Successfully");
+  //     fileDownload(res.data, "resume.pdf"); // Provide the correct filename and extension
+  //   }).catch((error) => {
+  //     console.error("Error downloading file:", error);
+  //   });
+  // };
   
 
 // const Download = (e) => {
