@@ -10,19 +10,34 @@ import fileDownload from 'js-file-download';
 
 const Home = () => {
 
-  // FOR DOWNLOAD MY RESUME 
-const Download = (e) => {
+  // FOR DOWNLOAD MY RESUME
+  const Download = (e) => {
     e.preventDefault();
     axios({
-      url:"http://localhost:8000/",
-      method:"GET",
-      responseType:"blob"
+      url: "http://localhost:8000/",
+      method: "GET",
+      responseType: "blob"
     }).then((res) => {
-        alert("Resume Download Successfully");
-        fileDownload(res.data,"Successfully Download");
-        
+      alert("Resume Download Successfully");
+      fileDownload(res.data, "resume.pdf"); // Provide the correct filename and extension
+    }).catch((error) => {
+      console.error("Error downloading file:", error);
     });
-};
+  };
+  
+
+// const Download = (e) => {
+//     e.preventDefault();
+//     axios({
+//       url:"http://localhost:8000/",
+//       method:"GET",
+//       responseType:"blob"
+//     }).then((res) => {
+//         alert("Resume Download Successfully");
+//         fileDownload(res.data,"Successfully Download");
+        
+//     });
+// };
 
 // FOR COMPONENT ANIMATION
 
