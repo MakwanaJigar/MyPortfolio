@@ -1,26 +1,18 @@
-/* body{
-  background-image: url("https://images.unsplash.com/photo-1574876999803-955c688d6581?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHxyb2JvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size:cover;
-  background-position: center;
-  object-fit: contain;
-} */
+
 html{
   scroll-behavior: smooth;
+  /* overflow-y: hidden; */
 }
 body{
   background-color: black;
 }
 ul li:hover{
-   /* font-weight: bold; */
-   /* background-color: rgb(5, 4, 47); */
    border-bottom: 1px red solid;
   }
 /* ...........NAVBAR............. */
 .navbar{
   background-color: rgb(28, 25, 34);
-  height: 10vh;
+  /* height: 10vh; */
 }
 .navbar-brand{   
    font-family: 'Shadows Into Light', cursive;
@@ -107,7 +99,7 @@ ul li:hover{
 /* ..................PROJECT SECTION CSS..................... */
 
 .ProjectInfo{
-  height: fit-content;
+  height:auto;
   width:100vw;
   background-color: rgb(12, 17, 51);
   color: aliceblue;
@@ -118,7 +110,6 @@ ul li:hover{
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  /* margin-bottom: 5vh; */
   justify-content: center;
 }
 #ProjectHeading{
@@ -135,7 +126,7 @@ ul li:hover{
 .footer{
   background-color: rgba(0, 0, 0, 0);
   color: rgb(248, 61, 83);
-  height: 40vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;

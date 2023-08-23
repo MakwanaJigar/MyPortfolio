@@ -7,7 +7,7 @@ const About = () => {
   useEffect(() => {
     AOS.init(
       {
-        offset: 120,
+        offset: 300,
         duration: 1000
       }
     );
@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <div className="main" id='about' data-aos="zoom-out-left">
-            <h1 className='Experience'>Work Experience</h1>
+            <h1 className='Experience' >Work Experience</h1>
 
             {/* ...........MAIN CONTENT..........  */}
             <div className="informations">
