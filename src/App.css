@@ -25,23 +25,10 @@ ul li:hover{
   background-color: rgb(34, 34, 34);
   height: 70vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.textside{
-  height: 80vh;
-  width: 50vw;
-  margin-top: 40vh;
-  margin-left: 3vh;
-}
-.textside .textarea1{
-  font-family: 'Source Code Pro', monospace;
-  font-weight: bold;
-  color: aliceblue;
-}
-.textside .textarea2{
-  font-family: 'Source Code Pro', monospace;
-  color: whitesmoke;
-}
-
 
 /* ..................languagebar................. */
 
@@ -94,7 +81,10 @@ ul li:hover{
 }
 .discriptions{
   color: rgb(219, 216, 216);
-  width: 45vw;
+  /* width: 45vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ..................PROJECT SECTION CSS..................... */

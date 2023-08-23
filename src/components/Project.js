@@ -25,7 +25,7 @@ const Project = () => {
       <h1 className='Projects'>Projects</h1>
        <div className="container my-4">
           <div
-            className="row featurette d-flex justify-content-center align-items-center mb-4"
+            className="row featurette d-flex  justify-content-start align-items-start mb-4"
             data-aos="fade-left"
           >
             <div className="col-md-7 order-md-2">
@@ -39,14 +39,14 @@ const Project = () => {
               contact management.
               </p>
             </div>
-            <div className="col-md-5 order-md-1 ">
+            {/* <div className="col-md-5 order-md-1 ">
                 <img src={contactIMG}  className="img-fluid" alt="..." />
             
-            </div>
+            </div> */}
           </div>
 
           <div
-            className="row featurette d-flex justify-content-center align-items-center mb-4"
+            className="row featurette d-flex justify-content-end align-items-end mb-4"
             data-aos='fade-right'
           >
             <div className="col-md-7 order-md-1">
@@ -59,13 +59,13 @@ const Project = () => {
               application that keeps users informed and engaged
               </p>
             </div>
-            <div className="col-md-5 order-md-1">
+            {/* <div className="col-md-5 order-md-1">
                 <img src={newsIMG} className="img-fluid" alt="..." />
-            </div>
+            </div> */}
           </div>
 
             <div
-              className="row featurette d-flex justify-content-center align-items-center mb-4"
+              className="row featurette d-flex  justify-content-start align-items-start mb-4"
               data-aos="fade-left"
             >
               <div className="col-md-7 order-md-2">
@@ -78,14 +78,14 @@ const Project = () => {
                 responsiveness for text-related tasks.
                 </p>
               </div>
-              <div className="col-md-5 order-md-1">
+              {/* <div className="col-md-5 order-md-1">
                   <img src={TextUtilsIMG} className="img-fluid" alt="..."/>
-              </div>
+              </div> */}
             </div>
 
 
             <div
-            className="row featurette d-flex justify-content-center align-items-center"
+            className="row featurette d-flex justify-content-end align-items-end"
             data-aos='fade-right'
           >
             <div className="col-md-7 order-md-1">
@@ -97,9 +97,9 @@ const Project = () => {
               visually appealing design.
               </p>
             </div>
-            <div className="col-md-5 order-md-1">
+            {/* <div className="col-md-5 order-md-1">
                 <img src={iCoderIMG} className="img-fluid mb-3" alt="..."/>
-            </div>
+            </div> */}
           </div>  
 
 
